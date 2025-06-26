@@ -1,1 +1,21 @@
- 
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>DSA Practice Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>📊 DSA Practice Tracker</h1>
+    <p>This webpage will show your leaderboard and progress.</p>
+    <pre id="data"></pre>
+
+    <script>
+        fetch('leaderboard.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("data").textContent = data;
+            });
+    </script>
+</body>
+</html>
+
